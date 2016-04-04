@@ -1,0 +1,16 @@
+version: "2"
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: nginx/Dockerfile
+    depends_on:
+      - app1
+    ports:
+      - "80:80"
+  app1:
+    build:
+      context: .
+      dockerfile: server/Dockerfile
+    ports:
+      - "8080"
