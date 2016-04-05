@@ -6,11 +6,19 @@ services:
       dockerfile: nginx/Dockerfile
     depends_on:
       - app1
+    networks:
+      - composite
     ports:
       - "80:80"
   app1:
     build:
       context: .
       dockerfile: server/Dockerfile
+    networks:
+      composite:
+        aliases:
+          - gofunserver
     ports:
       - "8080"
+networks:
+  composite:

@@ -13,5 +13,5 @@ RUN go install github.com/gofun
 # Run the outyet command by default when the container starts.
 ENTRYPOINT /go/bin/gofun
 
-# Document that the service listens on port 3000.
-EXPOSE 3000
+# Document that the service listens on port 8080.
+EXPOSE 8080

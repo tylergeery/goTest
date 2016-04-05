@@ -5,26 +5,47 @@ Fun with go
 
 
 # Helpful docker commands
-Build Everything
-`docker-compose up -d`
+###### Build Everything
+```
+docker-compose up -d
+```
 
-Destroy Everything
-`docker-compose down`
+##### Destroy Everything
+```
+docker-compose down
+```
 
-Build docker image
-`docker build -t gofun .`
+##### Build all docker images
+```
+docker-compose build
+```
 
-Start docker container && nginx server
-`docker run -d -t -p 8000:80 --name gofunserver gofun nginx -g 'daemon off;'`
+##### Kill docker container
+```
+docker kill <container_name>
+```
 
-Kill docker container
-`docker kill gofunserver`
+##### Restart docker container
+```
+docker restart <container_name>
+```
 
-Restart docker container
-`docker start gofunserver`
+##### Get (all) docker containers
+```
+docker ps -a
+```
 
-Get (all) docker containers
-`docker ps -a`
+##### Get all docker images
+```
+docker images
+```
 
-Remove docker container
-`docker rm gofunserver`
+##### Remove docker container
+```
+docker rm <container_name>
+```
+
+##### Remove docker image
+```
+docker rm <image_name>
+```
