@@ -23,5 +23,9 @@ _testmain.go
 *.test
 *.prof
 
+# JS Specific
+app/node_modules
+app/npm-debug.log
+
 # Mac Specific
 *.DS_Store

@@ -11,6 +11,10 @@ RUN rm -v /etc/nginx/nginx.conf
 # Copy a configuration file from the current directory
 ADD nginx/nginx.conf /etc/nginx/
 
+# Copy over static assets
+ADD app/public /var/www/assets
+ADD app/js/build /var/www/assets/js
+
 # Append "daemon off;" to the configuration file
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 
