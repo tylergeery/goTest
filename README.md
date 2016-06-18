@@ -49,3 +49,11 @@ docker rm <container_name>
 ```
 docker rm <image_name>
 ```
+
+
+
+
+# Opening up the app
+After running docker-compose up. You should be able to find the app at <docker-machine ip>:80
+
+This will have the nginx reverse proxy set up to serve static assets in front of the go webserver

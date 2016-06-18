@@ -10,6 +10,8 @@ services:
       - composite
     ports:
       - "80:80"
+    volumes:
+      - './app/js/build:/var/www/assets/js'
   app1:
     build:
       context: .
@@ -20,5 +22,7 @@ services:
           - gofunserver
     ports:
       - "8080"
+    volumes:
+      - './server:/go/src/github.com/gofun-server'
 networks:
   composite:
